@@ -38,6 +38,12 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
+        // Create contact page
+        createPage({
+          path: '/contact/',
+          component: path.resolve('src/components/contact.js'),
+        })
+
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges
 
