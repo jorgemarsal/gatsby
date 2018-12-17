@@ -1,5 +1,32 @@
 html {
   background-color: #fafbfc;
+  font-family: Segment Circular Std, Helvetica Neue, Helvetica, Arial,
+  sans-serif;
+}
+
+a, u {
+  text-decoration: none;
+  color: #49b882;
+
+}
+
+
+.animatedHover:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #49b882;
+  transition: all 0.3s;
+}
+
+.animatedHover:hover:after {
+  width: 100%;
+}
+
+.title {
+  color: #3d556b;
 }
 
 .tag {
@@ -9,4 +36,31 @@ html {
   display: inline-block;
   margin: 0 0 -3px;
   padding: 3px 12px 2px;
+  text-transform: uppercase;
+}
+
+.article-title {
+  margin: 8px 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 31px;
+  color: #3d556b;
+}
+
+.article-title a {
+  color: #3d556b;
+}
+
+.article-subtitle {
+  line-height: 24px;
+  color: #8fa1b3;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.animatedHover {
+  display: inline-block;
+  position: relative;
 }

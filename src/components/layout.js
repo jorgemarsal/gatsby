@@ -26,7 +26,7 @@ export default class Layout extends React.Component {
       >
         <header style={{ marginBottom: `1.5rem` }}>
           <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-            <h3 style={{ display: `inline` }}>Jorge Martinez</h3>
+            <h1 className="title" style={{ display: `inline` }}>Jorge Martinez</h1>
           </Link>
 
           <ul style={{ listStyle: `none`, float: `right` }}>
