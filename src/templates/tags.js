@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 // Components
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/layout'
+import Posts from '../components/posts'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -14,7 +15,8 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <h1>{tagHeader}</h1>
+      <Posts posts={edges} tag />
+      {/* <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {
           const { path, title } = node.frontmatter
@@ -24,7 +26,7 @@ const Tags = ({ pageContext, data }) => {
             </li>
           )
         })}
-      </ul>
+      </ul> */}
       {/*
               This links to a page that does not yet exist.
               We'll come back to it!
@@ -70,6 +72,11 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
+            tags
+            date
+          }
+          fields {
+            slug
           }
         }
       }
