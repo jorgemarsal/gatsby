@@ -1,0 +1,12 @@
+html {
+  background-color: #fafbfc;
+}
+
+.tag {
+  background-color: #eaf3fb;
+  color: #006cd1;
+  border-radius: 40px;
+  display: inline-block;
+  margin: 0 0 -3px;
+  padding: 3px 12px 2px;
+}
