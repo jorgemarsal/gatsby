@@ -18,9 +18,8 @@ const Posts = ({ posts }) => (
         }}
         key={node.fields.slug}
       >
-        <Link className="tag" to={`/tags/${node.frontmatter.tags[0]}/`}>
-          {node.frontmatter.tags[0]}
-        </Link>
+        {(node.frontmatter.tags || []).map((tag, i) => <Link className="tag" to={`/tags/${tag}/`}>{tag}</Link>)}
+
         <h3 className="article-title">
           <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
             {title}

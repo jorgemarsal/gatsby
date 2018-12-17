@@ -14,10 +14,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-
-        <Link className="tag" to={`/tags/${post.frontmatter.tags[0]}/`}>
-          {post.frontmatter.tags[0]}
-        </Link>
+        {(post.frontmatter.tags || []).map((tag, i) => <Link className="tag" to={`/tags/${tag}/`}>{tag}</Link>)}
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
