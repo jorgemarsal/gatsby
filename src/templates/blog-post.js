@@ -14,20 +14,17 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        {(post.frontmatter.tags || []).map((tag, i) => <Link className="tag" to={`/tags/${tag}/`}>{tag}</Link>)}
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            display: 'block',
-          }}
-        >
+        {(post.frontmatter.tags || []).map((tag, i) => (
+          <Link key={tag} className="tag" to={`/tags/${tag}/`}>
+            {tag}
+          </Link>
+        ))}
+        <h1 className="article-title">{post.frontmatter.title}</h1>
+        <p className="article-subtitle">
           Jorge Martinez on {post.frontmatter.date}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-          }}
-        />
+        <hr style={{}} />
         {/* <Bio /> */}
 
         <ul

@@ -10,6 +10,16 @@ a, u {
 
 }
 
+blockquote {
+  margin: 0 0 1rem 0;
+  padding: 1.2rem;
+  background: linear-gradient(to right, #eee, white);
+  border-left: 8px solid #ccc;
+  p:last-child {
+      margin: 0;
+  }
+}
+
 
 .animatedHover:after {
   position: absolute;
